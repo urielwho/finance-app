@@ -4,6 +4,8 @@ import api from '../services/api'
 import SummaryCards from '../components/transactions/SummaryCards'
 import TransactionList from '../components/transactions/TransactionList'
 import TransactionModal from '../components/transactions/TransactionModal'
+import MonthlyChart from '../components/transactions/MonthlyChart'
+import CategoryChart from '../components/transactions/CategoryChart'
 
 export default function Dashboard() {
   const { user, logout } = useAuth()
@@ -82,7 +84,12 @@ export default function Dashboard() {
         ) : (
           <>
             <SummaryCards transactions={transactions} />
-            <TransactionList
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+               <MonthlyChart transactions={transactions} />
+              <CategoryChart transactions={transactions} />
+            </div>
+          <TransactionList
               transactions={transactions}
               onEdit={handleEdit}
               onDelete={handleDelete}
