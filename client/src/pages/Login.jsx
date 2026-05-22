@@ -23,10 +23,10 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-2xl shadow-sm w-full max-w-md">
-        <h1 className="text-2xl font-semibold text-gray-800 mb-2">Entrar</h1>
-        <p className="text-gray-500 text-sm mb-6">Acesse sua conta para continuar</p>
+    <div className="min-h-screen w-full bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
+     <div className="bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-8 rounded-2xl w-full max-w-md mx-4">
+     <h1 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-2">Entrar</h1>
+    <p className="text-gray-400 dark:text-gray-500 text-sm mb-6">Acesse sua conta para continuar</p>
 
         {error && (
           <div className="bg-red-50 text-red-600 text-sm p-3 rounded-lg mb-4">
